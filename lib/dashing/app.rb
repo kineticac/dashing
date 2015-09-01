@@ -23,6 +23,9 @@ helpers do
   def protected!
     # override with auth logic
   end
+  def logout!
+    # override with logout logic
+  end
 end
 
 set :root, Dir.pwd
@@ -73,6 +76,10 @@ get '/events', provides: 'text/event-stream' do
     out << latest_events
     out.callback { settings.connections.delete(out) }
   end
+end
+
+get '/logout' do
+  logout!
 end
 
 get '/:dashboard' do
