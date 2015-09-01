@@ -26,6 +26,9 @@ helpers do
   def logout!
     # override with logout logic
   end
+  def set_defaults!
+    # override to set defaults
+  end
 end
 
 set :root, Dir.pwd
