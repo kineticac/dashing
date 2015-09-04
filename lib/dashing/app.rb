@@ -85,7 +85,7 @@ get '/logout' do
   logout!
 end
 
-get '/ii/:page' do
+get '/ii' do
 end
 
 get '/:dashboard' do
