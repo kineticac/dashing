@@ -85,6 +85,9 @@ get '/logout' do
   logout!
 end
 
+get '/ii/:page' do
+end
+
 get '/:dashboard' do
   protected!
   tilt_html_engines.each do |suffix, _|
